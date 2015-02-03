@@ -14,6 +14,8 @@ class DatatableServiceProvider extends ServiceProvider {
 
     public function boot()
     {
+        $this->loadViewsFrom(__DIR__ . '/../../views', 'datatable');
+        
         $this->publishes([
             __DIR__ . '/../../config/config.php' => config_path('datatable.php')
         ]);
